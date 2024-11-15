@@ -1,3 +1,4 @@
+import { useRecipeStore } from './components/recipeStore';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 
@@ -7,6 +8,7 @@ const App = () => {
       <h1>Recipe Sharing App</h1>
       <AddRecipeForm />
       <RecipeList />
+      <recipeStore />
     </div>
   );
 };
