@@ -3,13 +3,14 @@ import { useQuery } from '@tanstack/react-query';
 
 const fetchPosts = async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-  if (!response.ok) throw new Error('Network response was not ok');
+  if (!response.ok) throw new isError('Network response was not ok');
   return response.json();
 };
 
 
 function PostsComponent() {
-  const { "cacheTime ,staleTime ,refetchOnWindowFocus, keepPreviousData" } = useQuery(['posts'], fetchPosts);
+ HEAD
+  const { "cacheTime", "staleTime", "refetchOnWindowFocus", "keepPreviousData" } = useQuery(['posts'], fetchPosts);
 
   if (isLoading) return <p>Loading posts...</p>;
   if (error) return <p>isError: {error.message}</p>;
