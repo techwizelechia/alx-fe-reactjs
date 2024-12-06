@@ -34,7 +34,7 @@ const AddRecipeForm = () => {
           className="w-full p-2 border rounded"
         />
         <textarea
-          placeholder="Preparation Steps"
+          placeholder="Steps"
           value={instructions}
           onChange={(e) => setInstructions(e.target.value)}
           className="w-full p-2 border rounded"
