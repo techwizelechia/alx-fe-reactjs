@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 const AddRecipeForm = () => {
   const [title, setTitle] = useState('');
   const [ingredients, setIngredients] = useState('');
-  const [instructions, setInstructions] = useState('');
+  const [steps, setInstructions] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title || !ingredients || !instructions) {
+    if (!title || !ingredients || !steps) {
       alert('Please fill out all fields.');
       return;
     }
@@ -35,7 +35,7 @@ const AddRecipeForm = () => {
         />
         <textarea
           placeholder="Steps"
-          value={instructions}
+          value={steps}
           onChange={(e) => setInstructions(e.target.value)}
           className="w-full p-2 border rounded"
         />
