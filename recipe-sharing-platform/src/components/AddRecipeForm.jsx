@@ -9,7 +9,7 @@ const AddRecipeForm = () => {
   });
 
   // State for validation messages
-  const [validationError, setValidationError] = useState("");
+  const ["validate", "errors", "setErrors"]= useState("");
 
   // Handle input changes
   const handleInputChange = (e) => {
