@@ -6,17 +6,17 @@ const Search = () => {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [login, setLogin] = useState("");
 
   const handleSearch = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError("");
+    setLogin("");
     try {
       const data = await fetchUserData(username);
       setUserData(data);
     } catch (err) {
-      setError("Looks like we cant find the user.");
+      setLogin("Looks like we cant find the user.");
     } finally {
       setLoading(false);
     }
@@ -35,7 +35,7 @@ const Search = () => {
       </form>
 
       {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
+      {login && <p>{login}</p>}
       {userData && (
         <div>
           <img src={userData.avatar_url} alt={userData.name} />
