@@ -23,7 +23,8 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div className="mx-20">
+        <h1>GitHub User Search</h1>
       <form onSubmit={handleSearch}>
         <input
           type="text"

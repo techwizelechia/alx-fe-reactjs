@@ -4,8 +4,7 @@ import Search from "./components/Search";
 
 const App = () => {
   return (
-    <div className="">
-      <h1>GitHub User Search</h1>
+    <div>
       <Search />
     </div>
   );
