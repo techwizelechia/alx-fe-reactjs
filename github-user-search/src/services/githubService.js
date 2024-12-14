@@ -1,4 +1,3 @@
-// src/services/githubService.js
 import axios from "axios";
 
 const fetchUserData = async (username) => {
